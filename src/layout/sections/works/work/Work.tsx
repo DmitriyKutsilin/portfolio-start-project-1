@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from "../../../../components/FlexWrapper";
+import {Icon} from "../../../../components/icon/Icon";
 
 type WorkPropsType = {
     title: string
@@ -19,8 +20,13 @@ export const Work = (props: WorkPropsType) => {
             <Text>{props.text}</Text>
             <Stack>{props.stack}</Stack>
             <FlexWrapper justify={"space-between"} wrap={"wrap"}>
-                <Link href={props.previewLink}>Live Preview</Link>
-                <Link href={props.codeLink}>View Code</Link>
+                <Link href={props.previewLink}>
+                    <Icon iconId={} viewBox={}/>
+                    Live Preview
+                </Link>
+                <Link href={props.codeLink}>
+
+                    View Code</Link>
             </FlexWrapper>
         </StyledWork>
     );

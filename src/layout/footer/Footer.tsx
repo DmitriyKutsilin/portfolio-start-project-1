@@ -31,7 +31,7 @@ export const Footer = () => {
 
             <FlexWrapper justify={"space-between"}>
                 <Menu menuItems={footerItems}/>
-                <Copyright>© 2023 Svetlana Dyablo, All Rights Reserved.</Copyright>
+                <Copyright>© Dmitriy Kutsilin, All Rights Reserved.</Copyright>
             </FlexWrapper>
         </StyledFooter>
     );
