@@ -3,14 +3,21 @@ import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
 import {Menu} from "../../components/menu/Menu";
 import {Socials} from "../../components/socials/Socials";
+import {Container} from "../../components/Container";
+import {FlexWrapper} from "../../components/FlexWrapper";
 
 const headerItems = ["Home", "About", "Tech Stack", "Projects", "Contact"]
 export const Header = () => {
     return (
         <StyledHeader>
-            <Logo/>
-            <Menu menuItems={headerItems}/>
-            <Socials/>
+            <Container>
+                <FlexWrapper justify={"space-between"} align={"center"}>
+                    <Logo/>
+                    <Menu menuItems={headerItems}/>
+                    <Socials/>
+                </FlexWrapper>
+
+            </Container>
         </StyledHeader>
     );
 };
