@@ -4,6 +4,7 @@ import {Icon} from "../../components/icon/Icon";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {Menu} from "../../components/menu/Menu";
 import {Logo} from "../../components/logo/Logo";
+import {Socials} from "../../components/socials/Socials";
 
 const footerItems = ["Home", "About", "Tech Stack", "Projects", "Contact"]
 
@@ -13,20 +14,17 @@ export const Footer = () => {
             <FlexWrapper justify={"space-between"}>
                 <Logo/>
 
-                <a href={"tel:+375257546084"}>+375257546084</a>
-                <a href={"mailto:dmitiry.kutsilin@gmail.com"}>dmitriy.kutsilin@gmail.com</a>
+                <FlexWrapper>
+                    <Icon iconId={"phone"} width={"26"} height={"26"}/>
+                    <a href={"tel:+375257546084"}>+375257546084</a>
+                </FlexWrapper>
 
-                <SocialIconsList>
-                    <SocialIconLink href={"#"}>
-                        <Icon iconId={"githubSvg"}/>
-                    </SocialIconLink>
-                    <SocialIconLink href={"#"}>
-                        <Icon iconId={"githubSvg"}/>
-                    </SocialIconLink>
-                    <SocialIconLink href={"#"}>
-                        <Icon iconId={"githubSvg"}/>
-                    </SocialIconLink>
-                </SocialIconsList>
+                <FlexWrapper>
+                    <Icon iconId={"email"} width={"26"} height={"26"}/>
+                    <a href={"mailto:dmitiry.kutsilin@gmail.com"}>dmitriy.kutsilin@gmail.com</a>
+                </FlexWrapper>
+
+                <Socials/>
             </FlexWrapper>
 
             <FlexWrapper justify={"space-between"}>
@@ -39,14 +37,6 @@ export const Footer = () => {
 
 const StyledFooter = styled.footer`
     
-`
-
-const SocialIconsList = styled.ul`
-    
-`
-
-const SocialIconLink = styled.a`
-
 `
 
 const Copyright = styled.small`

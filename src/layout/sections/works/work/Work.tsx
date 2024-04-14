@@ -21,11 +21,11 @@ export const Work = (props: WorkPropsType) => {
             <Stack>{props.stack}</Stack>
             <FlexWrapper justify={"space-between"} wrap={"wrap"}>
                 <Link href={props.previewLink}>
-                    <Icon iconId={} viewBox={}/>
+                    <Icon iconId={"livePreview"} width={"20"} height={"20"}/>
                     Live Preview
                 </Link>
                 <Link href={props.codeLink}>
-
+                    <Icon iconId={"viewCode"} width={"20"} height={"20"}/>
                     View Code</Link>
             </FlexWrapper>
         </StyledWork>
