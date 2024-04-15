@@ -1,20 +1,24 @@
 import React from 'react';
 import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
-import {Menu} from "../../components/menu/Menu";
 import {Socials} from "../../components/socials/Socials";
 import {Container} from "../../components/Container";
 import {FlexWrapper} from "../../components/FlexWrapper";
+import {theme} from "../../styles/Theme";
+import {HeaderMenu} from "./headerMenu/HeaderMenu";
 
-const headerItems = ["Home", "About", "Tech Stack", "Projects", "Contact"]
+const headerItems = ["Home", "About", "Tech Stack", "Projects", "Testimonials", "Contact"]
 export const Header = () => {
     return (
         <StyledHeader>
             <Container>
                 <FlexWrapper justify={"space-between"} align={"center"}>
                     <Logo/>
-                    <Menu menuItems={headerItems}/>
-                    <Socials/>
+                    <FlexWrapper gap={"50px"}>
+                        <HeaderMenu menuItems={headerItems}/>
+                        <Socials/>
+                    </FlexWrapper>
+
                 </FlexWrapper>
 
             </Container>
@@ -23,7 +27,11 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-    background-color: #FAFAFA;
-    display: flex;
-    justify-content: space-between;
+    background-color: ${theme.colors.lightBg};
+    padding: 40px 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
 `

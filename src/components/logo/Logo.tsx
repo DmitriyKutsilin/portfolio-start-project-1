@@ -1,10 +1,10 @@
 import React from 'react';
 import {Icon} from "../icon/Icon";
+import styled from "styled-components";
 export const Logo = () => {
     return (
-        <a href="#">
-            {/*<Icon iconId={"dockerSvg"} width={"50"} height={"50"} viewBox={"0 0 50 50"}/>*/}
-            <svg width="48.000000" height="48.000000" viewBox="0 0 48 48" fill="none">
+        <StyledLogo href="#">
+            <svg width="60" height="60" viewBox="0 0 48 48" fill="none">
                 <defs>
                     <linearGradient id="paint_linear_4533_717_0" x1="23.500000" y1="0.290039" x2="23.500000"
                                     y2="47.290039" gradientUnits="userSpaceOnUse">
@@ -64,6 +64,12 @@ export const Logo = () => {
                         fill="url(#paint_linear_4533_723_0)" fill-opacity="1.000000"/>
             </svg>
 
-        </a>
+        </StyledLogo>
     );
 };
+
+const StyledLogo = styled.a`
+    display: inline-block;
+    max-width: 60px;
+    max-height: 60px;
+`
