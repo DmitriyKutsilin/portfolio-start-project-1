@@ -5,6 +5,7 @@ import {SectionDescription} from "../../../components/SectionDescription";
 import {Icon} from "../../../components/icon/Icon";
 import {Slider} from "../../../components/slider/Slider";
 import {FlexWrapper} from "../../../components/FlexWrapper";
+import {theme} from "../../../styles/Theme";
 
 export const Testimonials = () => {
     return (
@@ -26,11 +27,15 @@ const StyledTestimonials = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fadcff;
-    min-height: 50vh;
+    background-color: ${theme.colors.lightBg};
 `
 
 const SliderArea = styled.div`
-    min-width: 600px;
-    min-height: 500px;
+    border: 1px solid red;
+    
+    padding: 20px 80px;
+
+    border-radius: 20px;
+    box-shadow: 2px 2px 100px 0px rgba(0, 0, 0, 0.2);
+    background: rgb(255, 255, 255);
 `

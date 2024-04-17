@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from "styled-components";
-import {theme} from "../../../styles/Theme";
+import {theme} from "../../../../styles/Theme";
 
-export const HeaderMenu = (props: {menuItems: Array<string>}) => {
+export const TabMenu = (props: {menuItems: Array<string>}) => {
     return (
-        <StyledHeaderMenu>
+        <StyledMenu>
             <ul>
                 {props.menuItems.map((item, index) => {
                     return (
@@ -14,28 +14,29 @@ export const HeaderMenu = (props: {menuItems: Array<string>}) => {
                     )
                 })}
             </ul>
-        </StyledHeaderMenu>
+        </StyledMenu>
     );
 };
 
-const StyledHeaderMenu = styled.nav`
+const StyledMenu = styled.nav`
+    margin-bottom: 40px;
     display: flex;
-    align-items: center;
+    justify-content: center;
     ul {
         display: flex;
         gap: 30px;
     }
 `
+
 const Link = styled.a`
     position: relative;
-    color: ${theme.colors.font};
-    font-family: "DM Sans", sans-serif;
+    text-transform: uppercase;
+    font-family: DM Sans, sans-serif;
     font-size: 20px;
     font-weight: 500;
-    line-height: 29px;
+    line-height: 26px;
     text-align: center;
-    white-space: nowrap;
-
+    
     &:before {
         content: "";
         position: absolute;
@@ -49,32 +50,26 @@ const Link = styled.a`
         transform: scaleX(0);
         transition: transform 0.3s ease;
     }
-`
 
-const ListItem = styled.li`
     &:hover {
-        ${Link} {
             transition: all ease-in-out 0.15s;
             color: ${theme.colors.accent};
-        }
+    }
 
-        ${Link}::before {
+    &:hover::before {
             transform: scaleX(1);
-        }
     }
 `
 
-// const ListItem = styled.li`
-//     &:hover {
-//         ${Link} {
-//             transition: all ease-in-out 0.15s;
-//             color: ${theme.colors.accent};
-//             text-shadow: 0 1px 4px rgba(179, 147, 211, 0.1),
-//             0 2px 4px rgba(179, 147, 211, 0.15),
-//             0 3px 4px rgba(179, 147, 211, 0.2)
-//         }
-//         transition: all ease-in-out 0.15s;
-//         transform: scale(1);
-//     }
-// `
-
+const ListItem = styled.li`
+    // &:hover {
+    //     ${Link} {
+    //         transition: all ease-in-out 0.15s;
+    //         color: ${theme.colors.accent};
+    //     }
+    //
+    //     ${Link}::before {
+    //         transform: scaleX(1);
+    //     }
+    // }
+`

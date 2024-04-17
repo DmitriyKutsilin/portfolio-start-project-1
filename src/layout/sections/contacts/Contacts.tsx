@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Button} from "../../../components/Button";
 import {FlexWrapper} from "../../../components/FlexWrapper";
+import {theme} from "../../../styles/Theme";
 
 export const Contacts = () => {
     return (
@@ -13,7 +14,8 @@ export const Contacts = () => {
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d75233.34813646851!2d27.547781609841945!3d53.8954551330555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sby!4v1712141436927!5m2!1sru!2sby"
                         width="500" height="400px" loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"></iframe>
+                        referrerPolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </Map>
                 <StyledForm>
                     <Field placeholder={"name"}/>
@@ -29,7 +31,7 @@ export const Contacts = () => {
 
 const StyledContacts = styled.section`
     min-height: 50vh;
-    background-color: beige;
+    background-color: ${theme.colors.lightBg};
 `
 
 const StyledForm = styled.form`
@@ -45,5 +47,9 @@ const Field = styled.input`
 `
 
 const Map = styled.div`
-    
+    iframe {
+        border: none;
+        border-radius: 20px;
+        box-shadow: 2px 2px 100px 0px rgba(0, 0, 0, 0.2);
+    }
 `

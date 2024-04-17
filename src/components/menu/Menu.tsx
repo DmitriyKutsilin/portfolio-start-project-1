@@ -18,6 +18,8 @@ export const Menu = (props: {menuItems: Array<string>}) => {
 };
 
 const StyledMenu = styled.nav`
+    display: flex;
+    justify-content: center;
     ul {
         display: flex;
         gap: 30px;

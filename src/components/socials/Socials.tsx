@@ -29,7 +29,7 @@ export const Socials = () => {
 };
 
 const StyledSocials = styled.div`
-    width: 100%;
+    
 `
 
 const SocialIconsList = styled.ul`
