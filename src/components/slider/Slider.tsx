@@ -27,7 +27,7 @@ export const Slider = () => {
 
 const StyledSlider = styled.div`
     padding: 20px 0;
-    border: 1px solid black;
+    //border: 1px solid black;
     max-width: 500px;
     display: flex;
     flex-direction: column;

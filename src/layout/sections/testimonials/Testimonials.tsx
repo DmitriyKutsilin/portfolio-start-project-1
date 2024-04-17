@@ -31,7 +31,7 @@ const StyledTestimonials = styled.section`
 `
 
 const SliderArea = styled.div`
-    border: 1px solid red;
+    //border: 1px solid red;
     
     padding: 20px 80px;
 

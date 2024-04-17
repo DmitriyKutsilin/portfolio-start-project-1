@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {theme} from "../../../styles/Theme";
 
-export const HeaderMenu = (props: {menuItems: Array<string>}) => {
+export const FooterMenu = (props: {menuItems: Array<string>}) => {
     return (
         <StyledHeaderMenu>
             <ul>
@@ -30,20 +30,19 @@ const Link = styled.a`
     position: relative;
     color: ${theme.colors.font};
     font-family: "DM Sans", sans-serif;
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 400;
     line-height: 26px;
     text-align: center;
     white-space: nowrap;
-    display: inline-block;
 
     &:before {
         content: "";
         position: absolute;
         display: block;
         width: 100%;
-        height: 2px;
-        bottom: 0;
+        height: 3px;
+        bottom: -2px;
         left: 0;
         border-radius: 5px;
         background-color: ${theme.colors.accent};
@@ -78,4 +77,3 @@ const ListItem = styled.li`
 //         transform: scale(1);
 //     }
 // `
-

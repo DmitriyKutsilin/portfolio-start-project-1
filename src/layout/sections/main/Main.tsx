@@ -27,7 +27,7 @@ export const Main = () => {
     );
 };
 
-const StyledMain = styled.div`
+const StyledMain = styled.section`
     display: flex;
     min-height: 100vh;
     background-color: #fff;

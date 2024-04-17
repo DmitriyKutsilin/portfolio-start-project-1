@@ -28,7 +28,7 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
     background-color: ${theme.colors.lightBg};
-    padding: 40px 0;
+    padding: 20px 0;
     position: fixed;
     top: 0;
     right: 0;

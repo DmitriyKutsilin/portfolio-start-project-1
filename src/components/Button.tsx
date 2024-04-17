@@ -7,7 +7,7 @@ export const Button = styled.button`
     width: fit-content;
     font-size: 18px;
     line-height: 26px;
-    padding: 5px 10px;
+    padding: 5px 15px;
     text-transform: uppercase;
 
     &::before {

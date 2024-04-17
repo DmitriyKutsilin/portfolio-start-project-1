@@ -40,5 +40,6 @@ export const GlobalStyle = createGlobalStyle`
     section {
         background-color: ${theme.colors.lightBg};
         padding-top: 100px;
+        padding-bottom:100px;
     }
 `
